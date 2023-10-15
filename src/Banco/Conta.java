@@ -2,9 +2,15 @@ package Banco;
 
 public class Conta {
 
-	int numero;
-	double saldo;
+	private int numero;
+	private double saldo;
 	Cliente titular = new Cliente();
+	private static int totalDeContas;
+	
+	Conta() {
+		
+		Conta.totalDeContas += 1;
+	}
 	
 	boolean saca(double valor) {
 		
@@ -41,5 +47,17 @@ public class Conta {
 			
 			return true;
 		}
+	}
+	
+	//Getters
+	
+	public double getSaldo() {
+		
+		return this.saldo;
+	}
+	
+	public static int getTotalDeContas() {
+		
+		return Conta.totalDeContas;
 	}
 }
