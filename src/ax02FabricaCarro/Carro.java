@@ -1,4 +1,4 @@
-package FabricaCarro;
+package ax02FabricaCarro;
 
 public class Carro {
 
